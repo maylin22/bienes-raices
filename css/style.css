@@ -1,6 +1,15 @@
 /**globales**/
+
+html{
+    font-size: 62.5%;    /**reset para REM - 62.5%=10px de 16px**/
+}
+body{
+    font-family: 'Lato', sans-serif;
+    font-size: 1.6rem;/**=16px que se utiliza por default en la mayoria de las paginas**/
+}
+
 .contenedor {
-    max-width: 1200px;
+    max-width: 120rem;  /**=1200px**/
     margin: 0 auto;
 
 }
@@ -11,21 +20,25 @@
     background-position: center center;
     background-size: cover;
     height: 100vh;
-    min-height: 600px;
+    min-height: 60rem; /**=600px**/
+}
+.contenido-header{
+    display: flex;
+    flex-direction: column;
 }
 
 .barra {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 30px;
+    justify-content: space-between;/**alineacion horizontal**/
+    align-items: center;/**alineacion en el centro**/
+    padding-top: 3rem;/**=30px**/
 }
 
 .navegacion a {
     color: #ffffff;
     text-decoration: none;
-    font-size: 18px;
-    margin-right: 20px;
+    font-size: 1.8rem;/**=18px**/
+    margin-right: 2rem;/**=20px**/
 }
 
 .navegacion a:hover {
