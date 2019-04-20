@@ -1,17 +1,56 @@
 /**globales**/
 
-html{
-    font-size: 62.5%;    /**reset para REM - 62.5%=10px de 16px**/
+img{
+    max-width: 100%; /**para que todas las imagenes sean resposivas**/
 }
-body{
+
+html {
+    font-size: 62.5%;
+    /**reset para REM - 62.5%=10px de 16px**/
+}
+
+body {
     font-family: 'Lato', sans-serif;
-    font-size: 1.6rem;/**=16px que se utiliza por default en la mayoria de las paginas**/
+    font-size: 1.6rem;
+    /**=16px que se utiliza por default en la mayoria de las paginas**/
+    line-height: 2;
 }
 
 .contenedor {
-    max-width: 120rem;  /**=1200px**/
+    max-width: 120rem;
+    /**=1200px**/
     margin: 0 auto;
 
+}
+
+h1 {
+    font-size: 3.8rem;
+}
+
+h2 {
+    font-size: 3.4rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+h4 {
+    font-size: 2.6rem;
+}
+
+/**utilidades**/
+.seccion {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.fw-300 {
+    font-weight: 300;
+}
+
+.centrar-texto {
+    text-align: center;
 }
 
 /* header*/
@@ -20,25 +59,44 @@ body{
     background-position: center center;
     background-size: cover;
     height: 100vh;
-    min-height: 60rem; /**=600px**/
+    min-height: 60rem;
+    /**=600px**/
 }
-.contenido-header{
+
+.contenido-header {
+    height: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    /**alinear uno arriba y uno abajo**/
+}
+
+.contenido-header h1 {
+    color: #ffffff;
+    padding-bottom: 2rem;
+    /**=20px**/
+    max-width: 60rem;
+    /**=600px**/
+    line-height: 2;
 }
 
 .barra {
     display: flex;
-    justify-content: space-between;/**alineacion horizontal**/
-    align-items: center;/**alineacion en el centro**/
-    padding-top: 3rem;/**=30px**/
+    justify-content: space-between;
+    /**alineacion horizontal**/
+    align-items: center;
+    /**alineacion en el centro**/
+    padding-top: 3rem;
+    /**=30px**/
 }
 
 .navegacion a {
     color: #ffffff;
     text-decoration: none;
-    font-size: 1.8rem;/**=18px**/
-    margin-right: 2rem;/**=20px**/
+    font-size: 1.8rem;
+    /**=18px**/
+    margin-right: 2rem;
+    /**=20px**/
 }
 
 .navegacion a:hover {
@@ -47,4 +105,33 @@ body{
 
 .navegacion a:last-of-type {
     margin: 0;
+}
+
+/* iconos nosotros*/
+
+
+
+
+.icono-nosotros {
+    display: flex;
+    justify-content: space-between;
+}
+
+.icono {
+    flex-basis: calc(33.3%-1rem);
+    text-align: center;
+}
+
+.icono h3 {
+    text-transform: uppercase;
+    /* transforma a mayuscula*/
+}
+
+/* Anuncios*/
+.contenedor-anuncios {
+    display: flex;
+    justify-content: space-between;
+}
+.anuncio{
+    flex-basis: calc(33.3%-1rem);
 }
