@@ -60,6 +60,9 @@ h4 {
 .d-block{
     display: block!important; /*lo toma en cuenta a pesar de que ya haya un inline block y funcionan los dos*/
 }
+.contenido-centrado{
+    max-width: 800px;
+}
  
 /* botones*/
 .boton {
@@ -198,6 +201,7 @@ h4 {
     padding: 0;
     display: flex;
     justify-content: space-evenly;
+    flex: 1; /* paar qu crezca nuevamente*/
     max-width: 500px;
 }
 .iconos-caracteristicas li{
@@ -323,6 +327,13 @@ h4 {
     margin: 0;
     padding: 1rem 0 3rem 0;
 }
+/*Anuncios*/
 .resumen-propiedad{
-
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/*Contacto*/
+label{
+    display: block;
 }
