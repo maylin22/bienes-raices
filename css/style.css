@@ -5,13 +5,16 @@ img {
     /**para que todas las imagenes sean resposivas**/
 }
 
-html {    
+html {
     box-sizing: border-box;
     font-size: 62.5%;
     /**reset para REM - 62.5%=10px de 16px**/
 }
-*, *:before *:after{
-    box-sizing: inherit; /**sniped para solucionar el problema del ancho para que no se siga incrementado**/
+
+*,
+*:before *:after {
+    box-sizing: inherit;
+    /**sniped para solucionar el problema del ancho para que no se siga incrementado**/
 }
 
 body {
@@ -57,13 +60,16 @@ h4 {
 .centrar-texto {
     text-align: center;
 }
-.d-block{
-    display: block!important; /*lo toma en cuenta a pesar de que ya haya un inline block y funcionan los dos*/
+
+.d-block {
+    display: block !important;
+    /*lo toma en cuenta a pesar de que ya haya un inline block y funcionan los dos*/
 }
-.contenido-centrado{
+
+.contenido-centrado {
     max-width: 800px;
 }
- 
+
 /* botones*/
 .boton {
     color: #ffffff;
@@ -74,7 +80,11 @@ h4 {
     margin-top: 3rem;
     display: inline-block;
     text-align: center;
+    border: none;
 
+}
+.boton:hover{
+    cursor: pointer;
 }
 
 .boton-amarillo {
@@ -86,12 +96,15 @@ h4 {
 }
 
 /* header*/
-.site-header{ /* para la pagina de nosotros*/
+.site-header {
+    /* para la pagina de nosotros*/
     background-color: #333333;
     padding: 1rem 0 3rem 0;
 
 }
-.site-header.inicio { /* para la pagina principal*/
+
+.site-header.inicio {
+    /* para la pagina principal*/
     background-image: url(../img/header.jpg);
     background-position: center center;
     background-size: cover;
@@ -172,13 +185,17 @@ h4 {
 }
 
 .anuncio {
-    flex: 0 0 calc(33.3% - 1rem);/*ni pequeño ni grande solo su base*/
-    /*flex-grow: 0;*//*para que el contenido crezca*/
-    /*flex-shrink: 0;*//*para que el contenido de haga mas pequeño si es posible*/
+    flex: 0 0 calc(33.3% - 1rem);
+    /*ni pequeño ni grande solo su base*/
+    /*flex-grow: 0;*/
+    /*para que el contenido crezca*/
+    /*flex-shrink: 0;*/
+    /*para que el contenido de haga mas pequeño si es posible*/
     /*flex-basis: calc(33.3% - 1rem);*/
     border: 1px solid #B5B5B5;
     background-color: #f5f5f5;
-    margin-bottom: 2rem; /* separacion hacia afuera*/
+    margin-bottom: 2rem;
+    /* separacion hacia afuera*/
 }
 
 .contenido-anuncio {
@@ -196,98 +213,126 @@ h4 {
     /* p font-weight=400*/
     /* h1 font-weight=700   son valores por default*/
 }
-.iconos-caracteristicas{
+
+.iconos-caracteristicas {
     list-style: none;
     padding: 0;
     display: flex;
     justify-content: space-evenly;
-    flex: 1; /* paar qu crezca nuevamente*/
+    flex: 1;
+    /* paar qu crezca nuevamente*/
     max-width: 500px;
 }
-.iconos-caracteristicas li{
+
+.iconos-caracteristicas li {
     /*flex: 1;*/
     display: flex;
 }
-.iconos-caracteristicas img{
+
+.iconos-caracteristicas img {
     margin-right: 2rem;
 }
 
-.ver-todas{
+.ver-todas {
     display: flex;
     justify-content: flex-end;
 }
 
-/* contacto home*/ /* porque es la pagina principal*/
-.imagen-contacto{
+/* contacto home*/
+/* porque es la pagina principal*/
+.imagen-contacto {
     background-image: url(../img/encuentra.jpg);
     background-position: center center;
-    background-size: cover; /*cover para que la imagen se vea mejor*/
-    height: 40rem;  /*=400px*/
+    background-size: cover;
+    /*cover para que la imagen se vea mejor*/
+    height: 40rem;
+    /*=400px*/
     display: flex;
     align-items: center;
 }
-.contenido-contacto{
-    flex: 1; /*factor de crecimiento, detecta cuanto de espacio hay disponoble y lo divide*/
+
+.contenido-contacto {
+    flex: 1;
+    /*factor de crecimiento, detecta cuanto de espacio hay disponoble y lo divide*/
     color: #ffffff;
 }
-.contenido-contacto p{
-    font-size: 1.8rem;/*=16px*/
+
+.contenido-contacto p {
+    font-size: 1.8rem;
+    /*=16px*/
 }
-.seccion-inferior{
+
+.seccion-inferior {
     display: flex;
     justify-content: space-between;
 }
-.seccion-inferior .blog{
+
+.seccion-inferior .blog {
     flex-basis: 60%;
 }
-.seccion-inferior .testimoniales{
+
+.seccion-inferior .testimoniales {
     flex-basis: calc(40% - 2rem);
 }
-.entrada-blog{
+
+.entrada-blog {
     display: flex;
     justify-content: space-between;
     margin-bottom: 2rem;
 }
-.entrada-blog:last-of-type{
+
+.entrada-blog:last-of-type {
     margin-bottom: 0;
 }
-.entrada-blog .imagen{
+
+.entrada-blog .imagen {
     flex-basis: 40%;
 }
-.entrada-blog .texto-entrada{
+
+.entrada-blog .texto-entrada {
     flex-basis: calc(60% - 3rem);
 }
-.texto-entrada a{
+
+.texto-entrada a {
     color: #000000;
     text-decoration: none;
 }
-.texto-entrada h4{
+
+.texto-entrada h4 {
     margin: 0;
-   /* line-height: 2rem; interlineado del texto*/
+    /* line-height: 2rem; interlineado del texto*/
 }
-.texto-entrada h4::after{ /*que quiere decir crear un elemento o seudo elemeto despues del h4*/
+
+.texto-entrada h4::after {
+    /*que quiere decir crear un elemento o seudo elemeto despues del h4*/
     content: '';
     display: block;
     width: 15rem;
     height: .5rem;
     background-color: #71b100;
-    margin-top: 1rem;/*=10px*/
+    margin-top: 1rem;
+    /*=10px*/
 }
-.texto-entrada span{
+
+.texto-entrada span {
     color: #E08709;
 }
+
 /*Testimoniales*/
-.testimonial{
+.testimonial {
     background-color: #71b100;
     font-size: 2.4rem;
     padding: 2rem;
     color: #ffffff;
-    border-radius: 2rem; /*para poner border redondeados*/
+    border-radius: 2rem;
+    /*para poner border redondeados*/
 }
-.testimonial p{
+
+.testimonial p {
     text-align: right;
 }
-.testimonial blockquote::before{
+
+.testimonial blockquote::before {
     content: '';
     background-image: url(../img/comilla.svg);
     width: 4rem;
@@ -295,45 +340,111 @@ h4 {
     position: absolute;
     left: -2rem;
 }
-.testimonial blockquote{
+
+.testimonial blockquote {
     position: relative;
     padding-left: 5rem;
     font-weight: 300;
 }
+
 /*footer*/
-.site-footer{
+.site-footer {
     background-color: #333333;
     margin: 0;
 }
-.contenedor-footer{
+
+.contenedor-footer {
     padding: 3rem 0;
     display: flex;
     justify-content: space-between;
 }
-.copyright{
+
+.copyright {
     margin: 0;
     color: #ffffff;
 }
+
 /*INTERNAS*/
 /*Nosotros*/
-.contenido-nosotros{ /*padre del contenido*/
+.contenido-nosotros {
+    /*padre del contenido*/
     display: grid;
-    grid-template-columns: 50% 50%; /*(repeat(2, 1fr) es lo mismo*/
+    grid-template-columns: 50% 50%;
+    /*(repeat(2, 1fr) es lo mismo*/
     grid-column-gap: 2rem;
 }
-.texto-nosotros blockquote{
-    font-weight: 900; /*para darle negrilla a un parrafo*/
+
+.texto-nosotros blockquote {
+    font-weight: 900;
+    /*para darle negrilla a un parrafo*/
     font-size: 2rem;
     margin: 0;
     padding: 1rem 0 3rem 0;
 }
+
 /*Anuncios*/
-.resumen-propiedad{
+.resumen-propiedad {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 /*Contacto*/
-label{
+.contacto p{
+    font-size: 1.2rem;
+    color: #4f4f4f;
+    margin: 2rem 0 0 0;
+}
+legend{
+    font-size: 2rem;
+    color: #333333;
+}
+label {
+    font-weight: 700;
+    text-transform: uppercase;
     display: block;
+}
+
+/*input[type="text"]{
+    padding: 1rem 0rem 1rem 0rem;
+    display: block;
+    width: 100%;
+    background-color: #e1e1e1;
+    margin-bottom: 2rem;
+    border: none;
+}
+input[type="email"]{
+    padding: 1rem 0rem 1rem 0rem;
+    display: block;
+    width: 100%;
+    background-color: #e1e1e1;
+    margin-bottom: 2rem;
+    border: none;
+}*/
+input:not([type="submit"]), textarea, select {
+    /*afectara a todos los input menos al boton enviar*/
+    padding: 1rem 0rem 1rem 0rem;
+    display: block;
+    width: 100%;
+    background-color: #e1e1e1;
+    margin-bottom: 2rem;
+    border: none;
+}
+select{
+    -webkit-appearance: none; /*prefijo*/
+    appearance: none;
+    
+}
+input[type="radio"]{
+    width: auto; /*toma unnicamente el espacio que necesita */
+    margin: 0;
+}
+textarea{
+    height: 20rem;
+}
+.forma-contacto{
+    max-width: 30rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
